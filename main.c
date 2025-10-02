@@ -8,11 +8,9 @@ int main(int argc, char *argv[]){
   scanf("%i", &num);
   
   if(num>0)
-       printf("plus\n");
-  else if(num==0)
-       printf("zero\n");
+       printf("absolute is %i\n", num);
   else
-       printf("minus\n");
+       printf("absolute is %i\n", -num);
   
   system("PAUSE");	
   return 0;
