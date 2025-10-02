@@ -2,20 +2,24 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]){
-  int a,b;
-  char cal;
+  int answer=59;
+  int num;
+  int trial=0;
   
-  printf("enter the calculation : ");
-  scanf("%i %c %i", &a, &cal, &b);
   
-  if(cal == '+')
-         printf("= %i\n",a+b);
-  else if(cal == '-')
-         printf("= %i\n",a-b);
-  else if(cal == '*')
-         printf("= %i\n",a*b);
-  else if(cal == '/')
-         printf("= %i\n",a/b);
+  
+  do{
+     printf("Guess a number : ");
+     scanf("%i", &num);
+     trial++;
+     
+     if(num<answer)
+         printf("low!\n");
+     else if(num>answer)
+         printf("high!\n");
+  }while(num!=answer);
+  
+  printf("Congratulation! trials: %i\n", trial);
   
   system("PAUSE");	
   return 0;
