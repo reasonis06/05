@@ -2,17 +2,20 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]){
-  int num;
-  int sum=0;
-  int i;
+  int a,b;
+  char cal;
   
-  printf("input a number : ");
-  scanf("%d", &num);
+  printf("enter the calculation : ");
+  scanf("%i %c %i", &a, &cal, &b);
   
-  for(i=1; i<=num; i++)
-           sum += i;
-  
-  printf("The result is %d\n", sum);
+  if(cal == '+')
+         printf("= %i\n",a+b);
+  else if(cal == '-')
+         printf("= %i\n",a-b);
+  else if(cal == '*')
+         printf("= %i\n",a*b);
+  else if(cal == '/')
+         printf("= %i\n",a/b);
   
   system("PAUSE");	
   return 0;
