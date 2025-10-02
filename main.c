@@ -3,14 +3,16 @@
 
 int main(int argc, char *argv[]){
   int num;
+  int sum=0;
+  int i;
   
-  printf("input a integer : ");
-  scanf("%i", &num);
+  printf("input a number : ");
+  scanf("%d", &num);
   
-  if(num>0)
-       printf("absolute is %i\n", num);
-  else
-       printf("absolute is %i\n", -num);
+  for(i=1; i<=num; i++)
+           sum += i;
+  
+  printf("The result is %d\n", sum);
   
   system("PAUSE");	
   return 0;
